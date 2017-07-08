@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>开始 - Kico Style</title>
+    <meta name="theme-color" content="#3498db">
+    <link href="css/doc.css" rel="stylesheet" type="text/css"/>
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
+</head>
+<body>
+<header>
+    <div class="wrap">
+        <div class="head-title">
+            <h3 class="site-title">Kico Style</h3>
+            <div class="toggle-btn"></div>
+        </div>
+        <ul class="head-menu">
+            <li class="active"><a href="index.html">开始</a></li>
+            <li><a href="style.html">全局样式</a></li>
+            <li><a href="components.html">附加组件</a></li>
+            <li><a href="animation.html">动画与特效</a></li>
+            <li><a href="https://www.binkic.com" target="_blank">缤奇官网</a></li>
+        </ul>
+    </div>
+</header>
+<main class="container">
+    <div class="docs-title">
+        <div class="wrap">
+            <h1>开始</h1>
+            <p>Kico Style 是一个由青少年前端工程学习者保罗设计的一个轻量化前端框架。</p>
+        </div>
+    </div>
+    <div class="docs-content">
+        <div class="wrap">
+            <section id="start">
+                <div class="section-title">
+                    <h2>开始使用</h2>
+                </div>
+                <div class="section-content">
+                    <p>1. 欢迎享用<del>可口</del>的 Kico Style 1.0。</p>
+                    <p><a class="btn blue" href="https://www.binkic.com/product/kico" target="_blank">下载最新版</a></p>
+                    <p>2. 在头部引用 Kico Style 的样式表</p>
+                    <pre><code>&lt;link href="css/binkic.css" rel="stylesheet" type="text/css" /&gt;</code></pre>
+                    <p>或者在你的 CSS 里面这样做：</p>
+                    <pre><code>@import url("binkic.css"); /* 引用缤奇基层框架 */</code></pre>
+                    <p>3. 在头部插入给页面提供响应式功能的属性</p>
+                    <pre><code>&lt;meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1" /&gt;</code></pre>
+                </div>
+            </section>
+            <section id="setup">
+                <div class="section-title">
+                    <h2>简要规范</h2>
+                </div>
+                <div class="section-content">
+                    <p>底层编写需要按照先写 &lt;header&gt;，之后是 &lt;main&gt;，最后 &lt;footer&gt; 的方法。当然其之间也可以添加 &lt;aside&gt;（侧边栏）一类的标签。这三个标签的含义分别对应页眉，正文和页尾。在本框架内，它们一般为 body 元素的子元素，我们不建议您将此类标签插入至任一子元素。</p>
+                    <pre><code>&lt;header&gt;
+        头部内容区（顶部菜单等）
+&lt;/header&gt;
+&lt;main class="container"&gt;
+        正文内容区
+&lt;/main&gt;
+&lt;footer&gt;
+        页尾内容区（友情链接等）
+&lt;/footer&gt;</code></pre>
+                    <p>如要限制正文区的宽度，并需要在页面左右侧保留边距，请添加一个类名为“wrap”的DIV盒子。</p>
+                    <pre><code>&lt;main class="container"&gt;
+        &lt;div class="wrap"&gt;
+                &lt;p&gt;这段文字的宽度将被约束在1200像素&lt;/p&gt;
+        &lt;/div&gt;
+&lt;/main&gt;</code></pre>
+                    <blockquote>PS：上面添加的"container"类可以让其子元素无论如何放大缩小也不会溢出屏幕。</blockquote>
+                    <p>Header 子元素的布置可参考下列类名：</p>
+                    <div class="bk-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>类名</td>
+                                    <td>用途</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>.head-title</td>
+                                    <td>标题区，可放站点标题、可供菜单显示的切换按钮</td>
+                                </tr>
+                                <tr>
+                                    <td>.head-menu</td>
+                                    <td>菜单区，可放站点主要的菜单项</td>
+                                </tr>
+                                <tr>
+                                    <td>.site-title</td>
+                                    <td>站点标题，同时可放小标题（如有）</td>
+                                </tr>
+                                <tr>
+                                    <td>.toggle-btn-btn</td>
+                                    <td>切换显示菜单的按钮，用于手机版菜单的显示和隐藏</td>
+                                </tr>
+                                <tr>
+                                    <td>.search-btn</td>
+                                    <td>切换显示搜索的按钮，用于搜索面板的显示和隐藏</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>wrap 也有多种用法，分别对应不同的宽度。</p>
+                    <div class="bk-table">
+                        <table>
+                            <thead>
+                            <tr>
+                                <td>类名</td>
+                                <td>行为</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>wrap</td>
+                                <td>保留 20px 的边距，宽度限制到 1200px</td>
+                            </tr>
+                            <tr>
+                                <td>wrap min</td>
+                                <td>保留 20px 的边距，宽度限制到 800px</td>
+                            </tr>
+                            <tr>
+                                <td>wrap mid</td>
+                                <td>保留 20px 的边距，宽度限制到 1000px</td>
+                            </tr>
+                            <tr>
+                                <td>wrap max</td>
+                                <td>保留 20px 的边距，宽度限制到 1600px</td>
+                            </tr>
+                            <tr>
+                                <td>wrap full</td>
+                                <td>保留 20px 的边距，不限制宽度</td>
+                            </tr>
+                            <tr>
+                                <td>wrap clear</td>
+                                <td>清除边距</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>© 2017 By <a href="https://hi-paul.space" title="保罗的博客" target="_blank">Dreamer-Paul</a>.</p>
+</footer>
+
+<script src="js/docs.js"></script>
+<script src="js/binkic.js"></script>
+
+</body>
+</html>

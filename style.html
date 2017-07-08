@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>全局样式 - Kico Style</title>
+    <meta name="theme-color" content="#3498db">
+    <link href="css/doc.css" rel="stylesheet" type="text/css"/>
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
+</head>
+<body>
+<header>
+    <div class="wrap">
+        <div class="head-title">
+            <h3 class="site-title">Kico Style</h3>
+            <div class="toggle-btn"></div>
+        </div>
+        <ul class="head-menu">
+            <li><a href="index.html">开始</a></li>
+            <li class="active"><a href="style.html">全局样式</a></li>
+            <li><a href="components.html">附加组件</a></li>
+            <li><a href="animation.html">动画与特效</a></li>
+            <li><a href="https://www.binkic.com" target="_blank">缤奇官网</a></li>
+        </ul>
+    </div>
+</header>
+<main class="container">
+    <div class="docs-title">
+        <div class="wrap">
+            <h1>全局样式</h1>
+            <p>Kico Style 的全局样式，为元素添加一些类还可以得到更棒的效果。</p>
+        </div>
+    </div>
+    <div class="docs-content">
+        <div class="wrap">
+            <section id="types">
+                <div class="section-title">
+                    <h2>排版：</h2>
+                </div>
+                <div class="section-content">
+                    <h1>H1 超大标题</h1>
+                    <h2>H2 大标题</h2>
+                    <h3>H3 小标题</h3>
+                    <h4>H4 标题</h4>
+                    <h5>H5 标题</h5>
+                    <h6>H6 标题</h6>
+                    <p>正文文字</p>
+                    <p><a href="#">链接文字</a></p>
+                    <p><b>加粗文字</b></p>
+                    <p><cite>引用文字</cite></p>
+                    <p><em>强调文字</em></p>
+                    <p><i>斜体文字</i></p>
+                    <p><del>含删除线文字</del></p>
+                    <hr/>
+                    <blockquote>这是一个引用段落的测试。Kico Style 最早起源于 2016 年的“缤奇官网”项目，在保罗开发完此项目之后仍有很多的前端项目，保罗在制作过程中发现不同的项目存在很多的重复之处，因此制作了这个框架。Kico Style 仅包含常用的功能，不含其他繁杂的样式，既方便调用也无需像其他框架一样记录各种类名，让你的前端作品装逼更持久~</blockquote>
+                    <pre><code>&lt;h1&gt;H1 超大标题&lt;/h1&gt;
+&lt;h2&gt;H2 大标题&lt;/h2&gt;
+&lt;h3&gt;H3 小标题&lt;/h3&gt;
+&lt;h4&gt;H4 标题&lt;/h4&gt;
+&lt;h5&gt;H5 标题&lt;/h5&gt;
+&lt;h6&gt;H6 标题&lt;/h6&gt;
+&lt;p&gt;正文文字&lt;/p&gt;
+&lt;p&gt;&lt;a href="#"&gt;链接文字&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b>加粗文字&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;cite&gt;引用文字&lt;/cite&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;强调文字&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;斜体文字&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;含删除线文字&lt;/del&gt;&lt;/p&gt;
+&lt;hr/&gt;
+&lt;blockquote&gt;这是一个引用段落的测试。Kico Style 最早起源于 2016 年的“缤奇官网”项目，在保罗开发完此项目之后仍有很多的前端项目，保罗在制作过程中发现不同的项目存在很多的重复之处，因此制作了这个框架。Kico Style 仅包含常用的功能，不含其他繁杂的样式，既方便调用也无需像其他框架一样记录各种类名，让你的前端作品装逼更持久~&lt;/blockquote&gt;</code></pre>
+                    </div>
+            </section>
+            <section id="grids">
+                <div class="section-title">
+                    <h2>栅格系统：</h2>
+                </div>
+                <div class="section-content">
+                    <p>Kico Style 采用了12格的布局，可用于手机，平板和台式机，并设置有三个尺寸的栅格系统。改变您的浏览器宽度，体验不同类的效果 :)</p>
+                    <blockquote>PS：给类名为“row”的元素添加“full”类可以制作无间距的栅格。</blockquote>
+                    <div class="row full show-column">
+                        <div class="col-s-3">
+                            <p>col-s-3</p>
+                        </div>
+                        <div class="col-s-4">
+                            <p>col-s-4</p>
+                        </div>
+                        <div class="col-s-5">
+                            <p>col-s-5</p>
+                        </div>
+                    </div>
+                    <div class="row full show-column">
+                        <div class="col-m-1">
+                            <p>.col-m-1</p>
+                        </div>
+                        <div class="col-m-2">
+                            <p>.col-m-2</p>
+                        </div>
+                        <div class="col-m-3">
+                            <p>.col-m-3</p>
+                        </div>
+                        <div class="col-m-4">
+                            <p>.col-m-4</p>
+                        </div>
+                        <div class="col-m-2">
+                            <p>.col-m-2</p>
+                        </div>
+                    </div>
+                    <div class="row full show-column">
+                        <div class="col-l-3">
+                            <p>col-l-3</p>
+                        </div>
+                        <div class="col-l-4">
+                            <p>col-l-4</p>
+                        </div>
+                        <div class="col-l-5">
+                            <p>col-l-5</p>
+                        </div>
+                    </div>
+                    <br/>
+                    <blockquote>PS：请尽量在一行内（row 元素内）使用同类型的单列（column）元素，以获得最佳体验。</blockquote>
+                    <div class="bk-table">
+                        <table>
+                            <thead>
+                            <tr>
+                                <td>针对于</td>
+                                <td>需添加的类名称</td>
+                                <td>行为</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>手机</td>
+                                <td>.col-s-*</td>
+                                <td>小于 600px 的屏幕将更换为竖向摆放</td>
+                            </tr>
+                            <tr>
+                                <td>平板</td>
+                                <td>.col-m-*</td>
+                                <td>小于 900px 的屏幕将更换为竖向摆放</td>
+                            </tr>
+                            <tr>
+                                <td>台式机</td>
+                                <td>.col-l-*</td>
+                                <td>小于 1024px 的屏幕将更换为竖向摆放</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br/>
+                    <h3>对齐方式：</h3>
+                    <div class="bk-table">
+                        <table>
+                            <thead>
+                            <tr>
+                                <td>对齐方式</td>
+                                <td>添加的类名</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>左上</td>
+                                <td>不添加任何类</td>
+                            </tr>
+                            <tr>
+                                <td>右上</td>
+                                <td>right top 或 简写 right</td>
+                            </tr>
+                            <tr>
+                                <td>左下</td>
+                                <td>left bottom 或简写 bottom</td>
+                            </tr>
+                            <tr>
+                                <td>右下</td>
+                                <td>right bottom</td>
+                            </tr>
+                            <tr>
+                                <td>全局居中</td>
+                                <td>center</td>
+                            </tr>
+                            <tr>
+                                <td>左居中</td>
+                                <td>left center</td>
+                            </tr>
+                            <tr>
+                                <td>右居中</td>
+                                <td>right center</td>
+                            </tr>
+                            <tr>
+                                <td>上居中</td>
+                                <td>top center</td>
+                            </tr>
+                            <tr>
+                                <td>下居中</td>
+                                <td>bottom center</td>
+                            </tr>
+                            <tr>
+                                <td>左下</td>
+                                <td>bottom / left bottom</td>
+                            </tr>
+                            <tr>
+                                <td>右下</td>
+                                <td>right bottom</td>
+                            </tr>
+                            <tr>
+                                <td>电脑为左，手机为横向居中</td>
+                                <td>to-center / left to-center</td>
+                            </tr>
+                            <tr>
+                                <td>电脑为右，手机为横向居中</td>
+                                <td>right to-center</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br/>
+                    <h3>逆向转换（实验性功能）：</h3>
+                    <p>Kico Style 提供有栅格逆向转换的功能，方便你在不同宽度的时候进行栅格的逆转布局</p>
+                    <blockquote>PS：请配合使用同类型的子单列（column）元素，以获得最佳体验。col-m-* 类名不可以使用 l-reverse </blockquote>
+                    <div class="row full s-reverse show-column">
+                        <div class="col-m-4">
+                            <p>col-m-4 (1)</p>
+                        </div>
+                        <div class="col-m-4">
+                            <p>col-m-4 (2)</p>
+                        </div>
+                        <div class="col-m-4">
+                            <p>col-m-4 (3)</p>
+                        </div>
+                    </div>
+                    <div class="bk-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>转换方式</td>
+                                    <td>添加的类名</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>全部转换</td>
+                                    <td>reverse</td>
+                                </tr>
+                                <tr>
+                                    <td>仅小屏转换</td>
+                                    <td>s-reverse</td>
+                                </tr>
+                                <tr>
+                                    <td>仅中屏转换</td>
+                                    <td>m-reverse</td>
+                                </tr>
+                                <tr>
+                                    <td>仅大屏转换</td>
+                                    <td>l-reverse</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <!--
+            <section id="reverse">
+                <div class="section-title">
+                    <h2>栅格逆向转换：</h2>
+                </div>
+                <div class="section-content">
+
+                </div>
+            </section>-->
+            <section id="list">
+                <div class="section-title">
+                    <h2>项目列表：</h2>
+                </div>
+                <div class="section-content">
+                    <blockquote>PS：给 ul 元素添加“clear”类可以去除左侧小点点</blockquote>
+                    <div class="row">
+                        <div class="col-m-4">
+                            <h3>自驾游采购清单：</h3>
+                            <ul>
+                                <li>帐篷</li>
+                                <li>一些零食</li>
+                                <li>旅行背包</li>
+                                <li>烧烤、钓鱼装备</li>
+                            </ul>
+                        </div>
+                        <div class="col-m-4">
+                            <h3>明天要做的事情：</h3>
+                            <ol>
+                                <li>去缤奇公司上班</li>
+                                <li>完善项目后端的代码</li>
+                                <li>和公司同事去吃下午茶</li>
+                                <li>和女朋友约会</li>
+                            </ol>
+                        </div>
+                        <div class="col-m-4">
+                            <h3>我的梦想：</h3>
+                            <dl>
+                                <dt>开发属于自己的框架</dt>
+                                <dd>已实现，也就是 Kico Style</dd>
+                                <dt>建立缤奇公司</dt>
+                                <dd>选址在珠三角地区为宜</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="table">
+                <div class="section-title">
+                    <h2>表格：</h2>
+                </div>
+                <div class="section-content">
+                    <p>Kico Style 自带响应式表格系统，须在 table 元素前添加一个类名为 “bk-table” 的DIV盒子。</p>
+                    <blockquote>PS：表格默认为 100% 尺寸，待表格内文字空间不足时，将会自动出现滚动条以实现响应式。如果想限制表格宽度，请使用栅格系统。</blockquote>
+                    <div class="bk-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>第一列</td>
+                                    <td>第二列</td>
+                                    <td>第三列</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>第一行</td>
+                                    <td>第一行</td>
+                                    <td>第一行</td>
+                                </tr>
+                                <tr>
+                                    <td>第二行</td>
+                                    <td>第二行</td>
+                                    <td>第二行</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>© 2017 By <a href="https://hi-paul.space" title="保罗的博客" target="_blank">Dreamer-Paul</a>.</p>
+</footer>
+
+<script src="js/docs.js"></script>
+<script src="js/binkic.js"></script>
+
+</body>
+</html>

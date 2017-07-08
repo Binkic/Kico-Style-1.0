@@ -1,0 +1,206 @@
+@charset "UTF-8";
+
+/* ----
+
+# Kico Style Docs
+# By: Dreamer-Paul
+# Last Update: 2017.7.9
+
+一个简洁、有趣的开源响应式框架，仅包含基础样式，需按照一定规则进行二次开发。
+
+欢迎你加入缤奇，和我们一起改变世界。
+本代码为缤奇保罗原创，并遵守 MIT 开源协议。保罗的个人博客：https://hi-paul.space
+
+---- */
+
+@import url("binkic.css"); /* 引用缤奇基层框架 */
+
+/* 0 - 全局
+-------------------------------- */
+h1, h2, h3, h4 ,h5, h6{
+    font-weight: normal;
+}
+
+/* 1 - 页眉
+-------------------------------- */
+header{
+    left: 0;
+    right: 0;
+    z-index: 20;
+    position: fixed;
+    background: #fff;
+    transition: box-shadow 0.3s, height 0.3s;
+}
+header.active{
+    box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.2);
+}
+header .head-title{
+    float: left;
+}
+header .head-title:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+header .head-title .site-title{
+    float: left;
+    color: #3498db;
+    margin-right: 1em;
+    margin-bottom: 0;
+    line-height: 60px;
+}
+
+header .toggle-btn{
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    float: right;
+    display: none;
+    text-align: center;
+    background: #ffc670;
+    border-radius: 100%;
+    margin: 10px 0;
+}
+header .toggle-btn:before{
+    font-size: 24px;
+    content: "\f0c9";
+    line-height: 40px;
+    font-family: FontAwesome;
+}
+
+header .head-menu{
+    margin: 0;
+    float: left;
+}
+header .head-menu li{
+    float: left;
+    margin: 10px 0;
+    list-style: none;
+    line-height: 30px;
+}
+header .head-menu li a{
+    color: #222;
+    display: block;
+    padding: 5px 10px;
+    margin-right: .5em;
+    border-radius: 30px;
+    transition: color 0.3s, background 0.3s;
+}
+
+header .head-menu li a:hover{
+    color: #fff;
+    background: #ffc670;
+}
+
+header .head-menu li.active a{
+    color: #fff;
+    background: #ffc670;
+}
+
+@media screen and (max-width: 900px) {
+    header .head-title{
+        float: none;
+    }
+    header .toggle-btn{
+        display: block;
+    }
+    header .head-menu{
+        height: 0;
+        overflow: hidden;
+        background: #fff;
+        transform: scaleY(0);
+        transition: height 0.3s, transform 0.3s;
+        transform-origin: top center;
+    }
+    header .head-menu.active{
+        height: 260px;
+        transform: scaleY(1);
+    }
+    header .head-menu, header .head-menu li{
+        float: none;
+    }
+    header .head-menu li a{
+        margin-right: 0;
+    }
+}
+
+/* 2 - 主体内容
+-------------------------------- */
+.container{
+    padding-top: 60px;
+}
+
+/* -- 页面标题区 */
+.docs-title{
+    color: #fff;
+    padding: 30px 0;
+    background: #3498db;
+}
+.docs-title p{
+    color: #c1e0f4;
+}
+
+/* -- 页面内容区 */
+.docs-content{
+    padding: 2em 0;
+}
+
+.section-title{
+    margin-bottom: 10px;
+    border-bottom: 1px #ccc solid;
+}
+.section-title h2{
+    margin-bottom: 0.25em;
+}
+
+.section-content > *{
+    margin-bottom: 1rem;
+}
+.section-content > *:last-child{
+    margin-bottom: 0;
+}
+
+section{
+    margin-bottom: 50px;
+}
+.show-column{
+    margin-bottom: 1rem;
+}
+.show-column > *[class*="col-"]{
+    background: #fff;
+    padding: 10px !important;
+    border: 1px #ccc solid;
+}
+.show-column > *[class*="col-"]:first-child{
+    border-radius: 4px 0 0 4px;
+}
+.show-column > *[class*="col-"]:last-child{
+    border-radius: 0 4px 4px 0;
+}
+
+.show-animation{
+    padding: 30px;
+}
+.show-animation > *{
+    margin-right: 20px;
+}
+
+/* 3 - 页尾
+-------------------------------- */
+footer{
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    background: #3498db;
+}
+footer a{
+    color: #fff;
+}
+
+
+/* ----
+
+:) Copyright (C) 2017 Binkic Team. Made With ♥ By Paul.
+
+---- */

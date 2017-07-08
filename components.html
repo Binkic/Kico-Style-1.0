@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>附加组件 - Kico Style</title>
+    <meta name="theme-color" content="#3498db">
+    <link href="css/doc.css" rel="stylesheet" type="text/css"/>
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
+</head>
+<body>
+<header>
+    <div class="wrap">
+        <div class="head-title">
+            <h3 class="site-title">Kico Style</h3>
+            <div class="toggle-btn"></div>
+        </div>
+        <ul class="head-menu">
+            <li><a href="index.html">开始</a></li>
+            <li><a href="style.html">全局样式</a></li>
+            <li class="active"><a href="components.html">附加组件</a></li>
+            <li><a href="animation.html">动画与特效</a></li>
+            <li><a href="https://www.binkic.com" target="_blank">缤奇官网</a></li>
+        </ul>
+    </div>
+</header>
+<main class="container">
+    <div class="docs-title">
+        <div class="wrap">
+            <h1>附加组件</h1>
+            <p>Kico Style 的附加组件，提供一些常用的功能和组件。</p>
+        </div>
+    </div>
+    <div class="docs-content">
+        <div class="wrap">
+            <section id="buttons">
+                <div class="section-title">
+                    <h2>按钮</h2>
+                </div>
+                <div class="section-content">
+                    <p>给 a 元素、input 按钮元素或 button 元素添加“btn”类，即可让此元素变成一个按钮。</p>
+                    <p>
+                        <input class="btn" type="button" value="input 按钮"/>
+                        <button class="btn">button 按钮</button>
+                        <a class="btn">a 按钮</a>
+                    </p>
+                    <pre><code>&lt;input class="btn" type="button" value="input 按钮"/&gt;
+&lt;button class="btn"&gt;button 按钮&lt;/button&gt;
+&lt;a class="btn"&gt;a 按钮&lt;/a&gt;</code></pre>
+                    <p>给按钮添加类"small"和"large"可以实现小按钮和大按钮</p>
+                    <p>
+                        <button class="btn small">按钮（小）</button>
+                        <button class="btn">按钮（一般）</button>
+                        <button class="btn large">按钮（大）</button>
+                    </p>
+                    <pre><code>&lt;button class="btn small"&gt;按钮（小）&lt;/button&gt;
+&lt;button class="btn"&gt;按钮（一般）&lt;/button&gt;
+&lt;button class="btn large"&gt;按钮（大）&lt;/button&gt;</code></pre>
+                    <p>添加“red”，“yellow”，“blue”，“green”类可以让按钮变成 红/黄/蓝/绿 的颜色</p>
+                    <p>
+                        <button class="btn red">一枚红色按钮</button>
+                        <button class="btn yellow">一枚黄色按钮</button>
+                        <button class="btn blue">一枚蓝色按钮</button>
+                        <button class="btn green">一枚绿色按钮</button>
+                    </p>
+                    <pre><code>&lt;button class="btn red"&gt;一枚红色按钮&lt;/button&gt;
+&lt;button class="btn yellow"&gt;一枚黄色按钮&lt;/button&gt;
+&lt;button class="btn blue"&gt;一枚蓝色按钮&lt;/button&gt;
+&lt;button class="btn green"&gt;一枚绿色按钮&lt;/button&gt;</code></pre>
+                    <p>禁用的按钮：</p>
+                    <p>
+                        <button class="btn red" disabled>禁用的按钮</button>
+                    </p>
+                    <pre><code></code>&lt;button class="btn red" disabled&gt;禁用的按钮&lt;/button&gt;</pre>
+                </div>
+            </section>
+            <section id="forms">
+                <div class="section-title">
+                    <h2>表单</h2>
+                </div>
+                <div class="section-content">
+                    <div class="bk-form">
+                        <label>活动的文本框：<input value="2333" title="2333"/></label>
+                        <label>禁用的文本框：<input value="2333" title="2333" disabled/></label>
+                        <label>只读的文本框：<input value="2333" title="2333" readonly/></label>
+                        <label>带按钮的文本框：<input value="2333" title="2333"/><button class="btn small blue">提交</button></label>
+                        <label><input type="checkbox"/>多选选项</label>
+                        <label><input type="radio"/>单选选项</label>
+                        <label>滑动条：<input type="range" name="points" min="1" max="10" value="5"/></label>
+                    </div>
+                </div>
+            </section>
+            <section id="forms">
+                <div class="section-title">
+                    <h2>表单小组</h2>
+                </div>
+                <div class="section-content">
+                    <blockquote>PS：给使用“bk-form”或“bk-form-group”类的元素添加“inline”类可以使其子选项单行显示</blockquote>
+                    <form class="bk-form">
+                        <h3>多行：</h3>
+                        <div class="bk-form-group">
+                            <label><input type="checkbox"/>多选选项 1</label>
+                            <label><input type="checkbox"/>多选选项 2</label>
+                            <label><input type="checkbox"/>多选选项 3</label>
+                        </div>
+                        <h3>单行：</h3>
+                        <div class="bk-form-group inline">
+                            <label><input type="radio" name="radio"/>单选选项 1</label>
+                            <label><input type="radio" name="radio"/>单选选项 2</label>
+                            <label><input type="radio" name="radio"/>单选选项 3</label>
+                        </div>
+                    </form>
+                    <pre><code>&lt;form class="bk-form"&gt;
+    &lt;h3&gt;多行：&lt;/h3&gt;
+    &lt;div class="bk-form-group"&gt;
+        &lt;label&gt;&lt;input type="checkbox"/&gt;多选选项 1&lt;/label&gt;
+        &lt;label&gt;&lt;input type="checkbox"/&gt;多选选项 2&lt;/label&gt;
+        &lt;label&gt;&lt;input type="checkbox"/&gt;多选选项 3&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;h3&gt;单行：&lt;/h3&gt;
+    &lt;div class="bk-form-group inline"&gt;
+        &lt;label&gt;&lt;input type="radio" name="radio"/&gt;单选选项 1&lt;/label&gt;
+        &lt;label&gt;&lt;input type="radio" name="radio"/&gt;单选选项 2&lt;/label&gt;
+        &lt;label&gt;&lt;input type="radio" name="radio"/&gt;单选选项 3&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                </div>
+            </section>
+            <section id="alert">
+                <div class="section-title">
+                    <h2>弹框与遮罩</h2>
+                </div>
+                <div class="section-content">
+                    <blockquote>PS：弹框与遮罩采用了 Kico Style 内置的动画，如果您未使用内置的动画，则失去相应效果。</blockquote>
+                    <p><a class="btn blue" onclick="overlay_test_a()">点击弹出遮罩，并设定在3秒后删除</a></p>
+                    <pre><code>overlay(3000);</code></pre>
+                    <br/>
+                    <blockquote>PS：这段代码等价于“alert_box("这是一个弹窗测试", 1000, true);”</blockquote>
+                    <p><a class="btn blue" onclick="alert_test_a()">点击弹出弹窗，弹出遮罩，并设定在1秒后删除</a></p>
+                    <pre><code>alert_box("这是一个弹窗测试", 1000);</code></pre>
+                    <br/>
+                    <p><a class="btn blue" onclick="alert_test_b()">点击弹出弹窗，并设定在1秒后删除</a></p>
+                    <pre><code>alert_box("这是一个弹窗测试", 1000, false);</code></pre>
+                    <br/>
+                    <blockquote>PS：可使用 "red"、"yellow"、"blue"、"green" 类名，实现不同颜色的弹窗</blockquote>
+                    <p><a class="btn blue" onclick="alert_test_c()">点击弹出绿色弹窗，并设定在1秒后删除</a></p>
+                    <pre><code>alert_box("这是一个弹窗测试", 1000, true, "green");</code></pre>
+                    <div class="bk-table">
+                        <table>
+                            <thead>
+                            <tr>
+                                <td>参数</td>
+                                <td>说明</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>content</td>
+                                <td>要输出给弹框的内容</td>
+                            </tr>
+                            <tr>
+                                <td>count_down</td>
+                                <td>弹框消失的时间</td>
+                            </tr>
+                            <tr>
+                                <td>overlay_stat</td>
+                                <td>是否需要遮罩，默认为 true，反之为 false</td>
+                            </tr>
+                            <tr>
+                                <td>color</td>
+                                <td>指定弹框颜色，默认则为 null</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>© 2017 By <a href="https://hi-paul.space" title="保罗的博客" target="_blank">Dreamer-Paul</a>.</p>
+</footer>
+
+<script src="js/docs.js"></script>
+<script src="js/binkic.js"></script>
+
+</body>
+</html>

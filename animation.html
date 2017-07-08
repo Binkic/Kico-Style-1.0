@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>动画与特效 - Kico Style</title>
+    <meta name="theme-color" content="#3498db">
+    <link href="css/doc.css" rel="stylesheet" type="text/css"/>
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
+</head>
+<body>
+<header>
+    <div class="wrap">
+        <div class="head-title">
+            <h3 class="site-title">Kico Style</h3>
+            <div class="toggle-btn"></div>
+        </div>
+        <ul class="head-menu">
+            <li><a href="index.html">开始</a></li>
+            <li><a href="style.html">全局样式</a></li>
+            <li><a href="components.html">附加组件</a></li>
+            <li class="active"><a href="animation.html">动画与特效</a></li>
+            <li><a href="https://www.binkic.com" target="_blank">缤奇官网</a></li>
+        </ul>
+    </div>
+</header>
+<main class="container">
+    <div class="docs-title">
+        <div class="wrap">
+            <h1>动画与特效</h1>
+            <p>Kico Style 的动画特效，让你的网页元素变的更加有趣！</p>
+        </div>
+    </div>
+    <div class="docs-content">
+        <div class="wrap">
+            <section id="animation">
+                <div class="section-title">
+                    <h2>开始使用</h2>
+                </div>
+                <div class="section-content">
+                    <p>先添加类 "ani"，以开始为元素设置动画。</p>
+                    <p>添加 "infinite" 类可以让动画循环播放。</p>
+                    <p>添加 "loop" 类可以让动画播放完毕之后原路返回。</p>
+                    <p>添加 "slow"，"fast" 类可以设置动画播放的速度，慢为2秒，默认为1秒，快为0.5秒</p>
+                </div>
+            </section>
+            <section>
+                <div class="section-title">
+                    <h2>缩放动画：</h2>
+                </div>
+                <div class="section-content">
+                    <div class="show-animation">
+                        <button class="btn yellow ani scale-small infinite">从大变小</button>
+                        <button class="btn yellow ani scale-large infinite">从小变大</button>
+                    </div>
+                    <pre><code>&lt;button class="btn yellow ani scale-small infinite"&gt;从大变小&lt;/button&gt;
+&lt;button class="btn yellow ani scale-large infinite"&gt;从小变大&lt;/button&gt;</code></pre>
+                </div>
+            </section>
+            <section>
+                <div class="section-title">
+                    <h2>淡入淡出动画：</h2>
+                </div>
+                <div class="section-content">
+                    <div class="show-animation">
+                        <button class="btn yellow ani fade-in infinite">一般淡出</button>
+                        <button class="btn yellow ani fade-in-top infinite">向上淡出</button>
+                        <button class="btn yellow ani fade-in-bottom infinite">向下淡出</button>
+                        <button class="btn yellow ani fade-in-left infinite">向左淡出</button>
+                        <button class="btn yellow ani fade-in-right infinite">向右淡出</button>
+                    </div>
+                    <pre><code>&lt;button class="btn yellow ani fade-in infinite"&gt;一般淡出&lt;/button&gt;
+&lt;button class="btn yellow ani fade-in-top infinite"&gt;向上淡出&lt;/button&gt;
+&lt;button class="btn yellow ani fade-in-bottom infinite"&gt;向下淡出&lt;/button&gt;
+&lt;button class="btn yellow ani fade-in-left infinite"&gt;向左淡出&lt;/button&gt;
+&lt;button class="btn yellow ani fade-in-right infinite"&gt;向右淡出&lt;/button&gt;</code></pre>
+                </div>
+            </section>
+            <section>
+                <div class="section-title">
+                    <h2>旋转动画：</h2>
+                </div>
+                <div class="section-content">
+                    <div class="show-animation">
+                        <button class="btn yellow ani rotate infinite">旋转</button>
+                        <button class="btn yellow ani slide-left-right infinite">左右摇动</button>
+                    </div>
+                    <pre><code>&lt;button class="btn yellow ani rotate infinite"&gt;旋转&lt;/button&gt;
+&lt;button class="btn yellow ani slide-left-right infinite"&gt;左右摇动&lt;/button&gt;</code></pre>
+                </div>
+            </section>
+            <section>
+                <div class="section-title">
+                    <h2>位移动画：</h2>
+                </div>
+                <div class="section-content">
+                    <div class="show-animation">
+                        <button class="btn yellow ani up-and-down infinite">上下运动</button>
+                        <button class="btn yellow ani left-and-right infinite">左右运动</button>
+                    </div>
+                    <pre><code>&lt;button class="btn yellow ani up-and-down infinite"&gt;上下运动&lt;/button&gt;
+&lt;button class="btn yellow ani left-and-right infinite"&gt;左右运动&lt;/button&gt;</code></pre>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>© 2017 By <a href="https://hi-paul.space" title="保罗的博客" target="_blank">Dreamer-Paul</a>.</p>
+</footer>
+
+<script src="js/docs.js"></script>
+<script src="js/binkic.js"></script>
+
+</body>
+</html>
