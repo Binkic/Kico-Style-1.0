@@ -2,9 +2,9 @@
 
 /* ----
 
-# Kico Style 1.0
+# Kico Style 1.01
 # By: Dreamer-Paul
-# Last Update: 2017.7.9
+# Last Update: 2017.7.23
 
 一个简洁、有趣的开源响应式框架，仅包含基础样式，需按照一定规则进行二次开发。
 
@@ -37,12 +37,6 @@ article, aside,
 header, footer,
 nav, section, main{
     display: block;
-}
-
-/* - 代码区使用等宽字体 */
-pre{
-    font-size: 1em;
-    font-family: monospace;
 }
 
 /* - 已选内容 */
@@ -112,10 +106,22 @@ a, h1, h2, h3, h4, h5, h6, .btn{
 }
 
 /* - 代码*/
+pre, code{
+    font-size: 1em;
+    font-family: 'Consolas', 'Courier New', monospace, "微软雅黑";
+}
+
+code{
+    color: #c40b00;
+    font-size: .8em;
+    padding: .25em .5em;
+    border-radius: 4px;
+    background: #f7f2f4;
+}
+
 pre{
     color: #fff;
     padding: 10px;
-    font: inherit;
     margin: 0 0 1em;
     overflow-x: auto;
     border-radius: 5px;
@@ -168,17 +174,16 @@ hr.light{
 .bk-form label{
     display: block;
     user-select: none;
-    margin: 0 1em 1em 0;
 }
 .bk-form label:last-child{
     margin-bottom: 0;
 }
-.bk-form.inline label{
-    margin: 0 1em 0 0;
-    display: inline-block;
+.bk-form-group label.submit > input[type="text"]{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
-
-.bk-form label > button{
+.bk-form-group label.submit > input[type="text"]+button{
+    vertical-align: middle;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
@@ -187,29 +192,53 @@ hr.light{
     border-bottom-right-radius: 0;
 }
 
+.bk-form textarea{
+    display: block;
+    min-width: 100%;
+}
+
 .bk-form input{
     vertical-align: middle;
 }
 .bk-form input[type="checkbox"], .bk-form input[type="radio"]{
+    cursor: pointer;
     margin: 0 .5em 0 0;
 }
 
 /* -- 单组表单*/
-.bk-form-group{
-    margin-bottom: 2.5em;
+.bk-form .bk-form-group{
+    cursor: default;
+    overflow: hidden;
+    margin-bottom: 2em;
 }
-.bk-form-group:last-child{
+.bk-form .bk-form-group:last-child{
     margin-bottom: 0;
 }
-.bk-form-group.inline label{
-    margin: 0 1em 0 0;
-    display: inline-block;
+
+.bk-form .bk-form-group > *{
+    margin-bottom: 1em;
+}
+.bk-form .bk-form-group > *:last-child{
+    margin-bottom: 0;
 }
 
-input{
-    font-size: inherit;
-    box-sizing: border-box;
+@media screen and (max-width: 600px){
+    .bk-form .bk-form-group textarea{
+        width: 100%;
+    }
 }
+.bk-form.inline .bk-form-group label, .bk-form .bk-form-group.inline label{
+    float: left;
+    display: block;
+    margin: 0 1em 1em 0;
+}
+
+.bk-form .bk-form-group.inline:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
 input[disabled]{
     cursor: no-drop;
 }
@@ -235,8 +264,6 @@ textarea{
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
-    border-radius: 5px;
-    border: #ccc 1px solid;
 }
 
 table{
@@ -246,7 +273,6 @@ table{
     overflow: hidden;
     border-radius: 5px;
     border-collapse: collapse;
-    background: rgba(255, 255, 255, 0.9);
 }
 table th, table td{
     padding: 10px;
@@ -259,18 +285,26 @@ table > thead > tr > td, table > tbody > tr > td, table > tfoot > tr > td{
     white-space: nowrap;
 }
 
-table > thead > tr > th, table > thead > tr > td{
+table > tbody > tr:hover{
+    background: #eee !important;
+}
+
+/* - 线条 */
+table.border > thead > tr{
+    border-bottom: 2px solid #ccc;
+}
+table.border > tbody > tr > td{
+    border-bottom: 1px solid #ddd;
+}
+
+/* - 头部变蓝 */
+table.fill > thead > tr > th, table.fill > thead > tr > td{
     color: #fff;
     font-weight: bold;
     padding: 15px 10px;
     background: #3498db;
-    /*border-bottom-width: 2px;*/
 }
-
-table > tbody > tr:nth-child(1n) > th, table > tbody > tr:nth-child(1n) > td{
-    background: #fff;
-}
-table > tbody > tr:nth-child(2n) > th, table > tbody > tr:nth-child(2n) > td{
+table.fill > tbody > tr:nth-child(2n) > th, table.fill > tbody > tr:nth-child(2n){
     background: #f7f7f7;
 }
 
@@ -286,6 +320,10 @@ iframe{
     margin-left: -20px;
     margin-right: -20px;
 }
+.row.thin{
+    margin-left: -10px;
+    margin-right: -10px;
+}
 .row.full{
     margin-left: 0;
     margin-right: 0;
@@ -294,6 +332,9 @@ iframe{
 /* -- 网格间距 */
 .row [class*="col-s-"], .row [class*="col-m-"], .row [class*="col-l-"]{
     padding: 0 20px;
+}
+.row.thin [class*="col-s-"], .row.thin [class*="col-m-"], .row.thin [class*="col-l-"]{
+    padding: 0 10px;
 }
 .row.full [class*="col-s-"], .row.full [class*="col-m-"], .row.full [class*="col-l-"]{
     padding: 0;
@@ -515,27 +556,6 @@ iframe{
     }
 }
 
-/* -- 网格逆向转换 */
-.row.reverse{
-    flex-direction: row-reverse;
-}
-
-@media screen and (max-width: 500px){
-    .row.s-reverse*[class="col-s-"]{
-        flex-direction: column-reverse;
-    }
-}
-@media screen and (max-width: 900px){
-    .row.m-reverse{
-        flex-direction: column-reverse;
-    }
-}
-@media screen and (max-width: 1024px){
-    .row.l-reverse{
-        flex-direction: column-reverse;
-    }
-}
-
 /* -- 网格对齐方式 */
 .row > *.left, .row > *.right, .row > *.top, .row > *.bottom, .row > *.center{
     display: flex;
@@ -563,6 +583,23 @@ iframe{
 @media screen and (max-width: 900px){
     .row > *.to-center{
         align-items: center !important;
+    }
+}
+
+/* - 隐藏栅格功能 */
+@media screen and (max-width: 600px){
+    .row .s-hide{
+        display: none;
+    }
+}
+@media screen and (max-width: 900px){
+    .row .m-hide{
+        display: none;
+    }
+}
+@media screen and (max-width: 1024px){
+    .row .l-hide{
+        display: none;
     }
 }
 
@@ -597,7 +634,6 @@ iframe{
 
 /* - 按钮 */
 .btn{
-    border: 0;
     outline: 0;
     font: inherit;
     color: inherit;
@@ -607,6 +643,7 @@ iframe{
     border-radius: 4px;
     padding: .8em 1.5em;
     display: inline-block;
+    border: 1px solid transparent;
 }
 .btn:hover{
     color: inherit;
@@ -649,26 +686,34 @@ iframe{
 .btn.blue:active   { background: #2084c7; }
 .btn.green:active  { background: #138d6a; }
 
-/* - 博客 */
-.post-content > *{
-    margin: 0 0 1rem;
+/* - 开关按钮 */
+.sw-btn{
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    background: rgba(0,0,0,.05);
 }
-.post-content > *:last-child{
-    margin-bottom: 0;
+.sw-btn:before{
+    left: 0;
+    width: 30px;
+    height: 30px;
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100%;
+    background: rgba(0,0,0,0.2);
+    transition: background 0.3s, left 0.3s;
+}
+.sw-btn.active.sw-btn:before{
+    background: #3498db;
+    left: calc(100% - 30px);
 }
 
-/* -- 列表 */
-.post-content ul, .post-content ol{
-    margin-left: 1.3rem;
-}
-.post-content ul, .post-content li{
-    line-height: 1.5rem;
-}
-.post-content ul:last-child, .post-content li:last-child{
-    margin-bottom: 0;
-}
-
-/* - 遮罩与弹窗 */
+/* - 弹窗 */
 .bk-alert{
     top: 100px;
     left: 0;
@@ -709,6 +754,7 @@ iframe{
     padding: 1em;
 }
 
+/* - 遮罩 */
 .overlay{
     top: 0;
     left: 0;

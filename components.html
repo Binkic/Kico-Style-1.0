@@ -38,40 +38,40 @@
                     <h2>按钮</h2>
                 </div>
                 <div class="section-content">
-                    <p>给 a 元素、input 按钮元素或 button 元素添加“btn”类，即可让此元素变成一个按钮。</p>
+                    <p>给 <code>a</code> 元素、<code>input</code> 按钮元素或 <code>button</code> 元素添加 <code>btn</code> 类，即可让此元素变成一个按钮。</p>
                     <p>
                         <input class="btn" type="button" value="input 按钮"/>
                         <button class="btn">button 按钮</button>
                         <a class="btn">a 按钮</a>
                     </p>
-                    <pre><code>&lt;input class="btn" type="button" value="input 按钮"/&gt;
+                    <pre>&lt;input class="btn" type="button" value="input 按钮"/&gt;
 &lt;button class="btn"&gt;button 按钮&lt;/button&gt;
-&lt;a class="btn"&gt;a 按钮&lt;/a&gt;</code></pre>
-                    <p>给按钮添加类"small"和"large"可以实现小按钮和大按钮</p>
+&lt;a class="btn"&gt;a 按钮&lt;/a&gt;</pre>
+                    <p>给按钮添加 <code>small</code> 和 <code>large</code> 扩展类，可以使按钮变小和变大。</p>
                     <p>
                         <button class="btn small">按钮（小）</button>
                         <button class="btn">按钮（一般）</button>
                         <button class="btn large">按钮（大）</button>
                     </p>
-                    <pre><code>&lt;button class="btn small"&gt;按钮（小）&lt;/button&gt;
+                    <pre>&lt;button class="btn small"&gt;按钮（小）&lt;/button&gt;
 &lt;button class="btn"&gt;按钮（一般）&lt;/button&gt;
-&lt;button class="btn large"&gt;按钮（大）&lt;/button&gt;</code></pre>
-                    <p>添加“red”，“yellow”，“blue”，“green”类可以让按钮变成 红/黄/蓝/绿 的颜色</p>
+&lt;button class="btn large"&gt;按钮（大）&lt;/button&gt;</pre>
+                    <p>给按钮添加 <code>red</code>，<code>yellow</code>，<code>blue</code>，<code>green</code> 类可以让按钮变成 红/黄/蓝/绿 的颜色</p>
                     <p>
                         <button class="btn red">一枚红色按钮</button>
                         <button class="btn yellow">一枚黄色按钮</button>
                         <button class="btn blue">一枚蓝色按钮</button>
                         <button class="btn green">一枚绿色按钮</button>
                     </p>
-                    <pre><code>&lt;button class="btn red"&gt;一枚红色按钮&lt;/button&gt;
+                    <pre>&lt;button class="btn red"&gt;一枚红色按钮&lt;/button&gt;
 &lt;button class="btn yellow"&gt;一枚黄色按钮&lt;/button&gt;
 &lt;button class="btn blue"&gt;一枚蓝色按钮&lt;/button&gt;
-&lt;button class="btn green"&gt;一枚绿色按钮&lt;/button&gt;</code></pre>
+&lt;button class="btn green"&gt;一枚绿色按钮&lt;/button&gt;</pre>
                     <p>禁用的按钮：</p>
                     <p>
                         <button class="btn red" disabled>禁用的按钮</button>
                     </p>
-                    <pre><code></code>&lt;button class="btn red" disabled&gt;禁用的按钮&lt;/button&gt;</pre>
+                    <pre>&lt;button class="btn red" disabled&gt;禁用的按钮&lt;/button&gt;</pre>
                 </div>
             </section>
             <section id="forms">
@@ -80,13 +80,17 @@
                 </div>
                 <div class="section-content">
                     <div class="bk-form">
-                        <label>活动的文本框：<input value="2333" title="2333"/></label>
-                        <label>禁用的文本框：<input value="2333" title="2333" disabled/></label>
-                        <label>只读的文本框：<input value="2333" title="2333" readonly/></label>
-                        <label>带按钮的文本框：<input value="2333" title="2333"/><button class="btn small blue">提交</button></label>
-                        <label><input type="checkbox"/>多选选项</label>
-                        <label><input type="radio"/>单选选项</label>
-                        <label>滑动条：<input type="range" name="points" min="1" max="10" value="5"/></label>
+                        <div class="bk-form-group">
+                            <label>活动的文本框：<input type="text" value="2333" title="2333"/></label>
+                            <label>禁用的文本框：<input type="text" value="2333" title="2333" disabled/></label>
+                            <label>只读的文本框：<input type="text" value="2333" title="2333" readonly/></label>
+                            <label class="submit">带按钮的文本框：<input type="text" value="2333" title="2333"/><button class="btn small blue">提交</button></label>
+                            <label><input type="checkbox"/>多选选项</label>
+                            <label><input type="radio"/>单选选项</label>
+                            <label>滑动条：<input type="range" name="points" min="1" max="10" value="5"/></label>
+                            <label>滑动按钮：<div class="sw-btn"></div></label>
+                            <textarea placeholder="自定义文本框"></textarea>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -110,7 +114,7 @@
                             <label><input type="radio" name="radio"/>单选选项 3</label>
                         </div>
                     </form>
-                    <pre><code>&lt;form class="bk-form"&gt;
+                    <pre>&lt;form class="bk-form"&gt;
     &lt;h3&gt;多行：&lt;/h3&gt;
     &lt;div class="bk-form-group"&gt;
         &lt;label&gt;&lt;input type="checkbox"/&gt;多选选项 1&lt;/label&gt;
@@ -123,7 +127,7 @@
         &lt;label&gt;&lt;input type="radio" name="radio"/&gt;单选选项 2&lt;/label&gt;
         &lt;label&gt;&lt;input type="radio" name="radio"/&gt;单选选项 3&lt;/label&gt;
     &lt;/div&gt;
-&lt;/form&gt;</code></pre>
+&lt;/form&gt;</pre>
                 </div>
             </section>
             <section id="alert">
@@ -133,24 +137,24 @@
                 <div class="section-content">
                     <blockquote>PS：弹框与遮罩采用了 Kico Style 内置的动画，如果您未使用内置的动画，则失去相应效果。</blockquote>
                     <p><a class="btn blue" onclick="overlay_test_a()">点击弹出遮罩，并设定在3秒后删除</a></p>
-                    <pre><code>overlay(3000);</code></pre>
+                    <pre>&lt;script&gt;overlay(3000);&lt;/script&gt;</pre>
                     <br/>
                     <blockquote>PS：这段代码等价于“alert_box("这是一个弹窗测试", 1000, true);”</blockquote>
                     <p><a class="btn blue" onclick="alert_test_a()">点击弹出弹窗，弹出遮罩，并设定在1秒后删除</a></p>
-                    <pre><code>alert_box("这是一个弹窗测试", 1000);</code></pre>
+                    <pre>&lt;script&gt;alert_box("这是一个弹窗测试", 1000);&lt;/script&gt;</pre>
                     <br/>
                     <p><a class="btn blue" onclick="alert_test_b()">点击弹出弹窗，并设定在1秒后删除</a></p>
-                    <pre><code>alert_box("这是一个弹窗测试", 1000, false);</code></pre>
+                    <pre>&lt;script&gt;alert_box("这是一个弹窗测试", 1000, false);&lt;/script&gt;</pre>
                     <br/>
-                    <blockquote>PS：可使用 "red"、"yellow"、"blue"、"green" 类名，实现不同颜色的弹窗</blockquote>
+                    <blockquote>PS：可使用 <code>red</code>、<code>yellow</code>、<code>blue</code>、<code>green</code> 类名，实现不同颜色的弹窗</blockquote>
                     <p><a class="btn blue" onclick="alert_test_c()">点击弹出绿色弹窗，并设定在1秒后删除</a></p>
-                    <pre><code>alert_box("这是一个弹窗测试", 1000, true, "green");</code></pre>
+                    <pre>&lt;script&gt;alert_box("这是一个弹窗测试", 1000, true, "green");&lt;/script&gt;</pre>
                     <div class="bk-table">
-                        <table>
+                        <table class="border">
                             <thead>
                             <tr>
-                                <td>参数</td>
-                                <td>说明</td>
+                                <th>参数</th>
+                                <th>说明</th>
                             </tr>
                             </thead>
                             <tbody>

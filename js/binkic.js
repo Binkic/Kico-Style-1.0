@@ -1,8 +1,8 @@
 /* ----
 
-# Kico Style 1.0
+# Kico Style 1.0.1
 # By: Dreamer-Paul
-# Last Update: 2017.7.9
+# Last Update: 2017.7.23
 
 一个简洁、有趣的开源响应式框架，仅包含基础样式，需按照一定规则进行二次开发。
 

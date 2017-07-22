@@ -4,7 +4,7 @@
 
 # Kico Style Docs
 # By: Dreamer-Paul
-# Last Update: 2017.7.9
+# Last Update: 2017.7.23
 
 一个简洁、有趣的开源响应式框架，仅包含基础样式，需按照一定规则进行二次开发。
 
@@ -53,20 +53,18 @@ header .head-title .site-title{
 header .toggle-btn{
     color: #fff;
     width: 40px;
-    height: 40px;
-    cursor: pointer;
     float: right;
     display: none;
-    text-align: center;
+    margin: 10px 0;
+    cursor: pointer;
     background: #ffc670;
     border-radius: 100%;
-    margin: 10px 0;
 }
 header .toggle-btn:before{
-    font-size: 24px;
+    display: block;
     content: "\f0c9";
-    line-height: 40px;
-    font-family: FontAwesome;
+    text-align: center;
+    font: 1.5em/40px "FontAwesome";
 }
 
 header .head-menu{
@@ -143,7 +141,14 @@ header .head-menu li.active a{
 
 /* -- 页面内容区 */
 .docs-content{
-    padding: 2em 0;
+    padding: 50px 0;
+}
+
+.docs-content section{
+    margin-bottom: 50px;
+}
+.docs-content section:last-child{
+    margin-bottom: 0;
 }
 
 .section-title{
@@ -161,24 +166,15 @@ header .head-menu li.active a{
     margin-bottom: 0;
 }
 
-section{
-    margin-bottom: 50px;
-}
-.show-column{
-    margin-bottom: 1rem;
-}
-.show-column > *[class*="col-"]{
-    background: #fff;
-    padding: 10px !important;
-    border: 1px #ccc solid;
-}
-.show-column > *[class*="col-"]:first-child{
-    border-radius: 4px 0 0 4px;
-}
-.show-column > *[class*="col-"]:last-child{
-    border-radius: 0 4px 4px 0;
+/* - 展示栅格 */
+.show-column > *[class*="col-"] p{
+    color: #fff;
+    padding: 1em;
+    border-radius: 4px;
+    background: #3498db;
 }
 
+/* - 展示动画 */
 .show-animation{
     padding: 30px;
 }

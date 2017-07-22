@@ -28,7 +28,7 @@
     <div class="docs-title">
         <div class="wrap">
             <h1>全局样式</h1>
-            <p>Kico Style 的全局样式，为元素添加一些类还可以得到更棒的效果。</p>
+            <p>Kico Style 的全局样式，为元素添加一些扩展类还可以得到更棒的效果。</p>
         </div>
     </div>
     <div class="docs-content">
@@ -53,7 +53,7 @@
                     <p><del>含删除线文字</del></p>
                     <hr/>
                     <blockquote>这是一个引用段落的测试。Kico Style 最早起源于 2016 年的“缤奇官网”项目，在保罗开发完此项目之后仍有很多的前端项目，保罗在制作过程中发现不同的项目存在很多的重复之处，因此制作了这个框架。Kico Style 仅包含常用的功能，不含其他繁杂的样式，既方便调用也无需像其他框架一样记录各种类名，让你的前端作品装逼更持久~</blockquote>
-                    <pre><code>&lt;h1&gt;H1 超大标题&lt;/h1&gt;
+                    <pre>&lt;h1&gt;H1 超大标题&lt;/h1&gt;
 &lt;h2&gt;H2 大标题&lt;/h2&gt;
 &lt;h3&gt;H3 小标题&lt;/h3&gt;
 &lt;h4&gt;H4 标题&lt;/h4&gt;
@@ -67,7 +67,7 @@
 &lt;p&gt;&lt;i&gt;斜体文字&lt;/i&gt;&lt;/p&gt;
 &lt;p&gt;&lt;del&gt;含删除线文字&lt;/del&gt;&lt;/p&gt;
 &lt;hr/&gt;
-&lt;blockquote&gt;这是一个引用段落的测试。Kico Style 最早起源于 2016 年的“缤奇官网”项目，在保罗开发完此项目之后仍有很多的前端项目，保罗在制作过程中发现不同的项目存在很多的重复之处，因此制作了这个框架。Kico Style 仅包含常用的功能，不含其他繁杂的样式，既方便调用也无需像其他框架一样记录各种类名，让你的前端作品装逼更持久~&lt;/blockquote&gt;</code></pre>
+&lt;blockquote&gt;这是一个引用段落的测试。Kico Style 最早起源于 2016 年的“缤奇官网”项目，在保罗开发完此项目之后仍有很多的前端项目，保罗在制作过程中发现不同的项目存在很多的重复之处，因此制作了这个框架。Kico Style 仅包含常用的功能，不含其他繁杂的样式，既方便调用也无需像其他框架一样记录各种类名，让你的前端作品装逼更持久~&lt;/blockquote&gt;</pre>
                     </div>
             </section>
             <section id="grids">
@@ -75,56 +75,81 @@
                     <h2>栅格系统：</h2>
                 </div>
                 <div class="section-content">
-                    <p>Kico Style 采用了12格的布局，可用于手机，平板和台式机，并设置有三个尺寸的栅格系统。改变您的浏览器宽度，体验不同类的效果 :)</p>
-                    <blockquote>PS：给类名为“row”的元素添加“full”类可以制作无间距的栅格。</blockquote>
-                    <div class="row full show-column">
-                        <div class="col-s-3">
-                            <p>col-s-3</p>
+                    <p>Kico Style 采用了12格的布局，可用于手机，平板和台式机，并设置有三个尺寸的栅格系统。通过改变您的浏览器宽度，即可体验到不同类的效果 :) 建议在一行内不要使栅格超过总和12，避免间距出现错误。同时建议在一行内不要混用不同类型的 Column 列元素。</p>
+                    <blockquote>PS：给类名为 <code>row</code> 的元素添加 <code>full</code> 扩展类可以清除间距，添加扩展类 <code>thin</code> 可以使间距更窄。</blockquote>
+                    <div class="row thin show-column">
+                        <div class="col-s-4">
+                            <p>col-s-4</p>
                         </div>
                         <div class="col-s-4">
                             <p>col-s-4</p>
                         </div>
-                        <div class="col-s-5">
-                            <p>col-s-5</p>
+                        <div class="col-s-4">
+                            <p>col-s-4</p>
                         </div>
                     </div>
-                    <div class="row full show-column">
-                        <div class="col-m-1">
-                            <p>.col-m-1</p>
-                        </div>
-                        <div class="col-m-2">
-                            <p>.col-m-2</p>
+                    <div class="row thin show-column">
+                        <div class="col-m-3">
+                            <p>.col-m-3</p>
                         </div>
                         <div class="col-m-3">
                             <p>.col-m-3</p>
                         </div>
-                        <div class="col-m-4">
-                            <p>.col-m-4</p>
+                        <div class="col-m-3">
+                            <p>.col-m-3</p>
                         </div>
-                        <div class="col-m-2">
-                            <p>.col-m-2</p>
-                        </div>
-                    </div>
-                    <div class="row full show-column">
-                        <div class="col-l-3">
-                            <p>col-l-3</p>
-                        </div>
-                        <div class="col-l-4">
-                            <p>col-l-4</p>
-                        </div>
-                        <div class="col-l-5">
-                            <p>col-l-5</p>
+                        <div class="col-m-3">
+                            <p>.col-m-3</p>
                         </div>
                     </div>
-                    <br/>
-                    <blockquote>PS：请尽量在一行内（row 元素内）使用同类型的单列（column）元素，以获得最佳体验。</blockquote>
+                    <div class="row thin show-column">
+                        <div class="col-l-6">
+                            <p>col-l-6</p>
+                        </div>
+                        <div class="col-l-6">
+                            <p>col-l-6</p>
+                        </div>
+                    </div>
+                    <pre>&lt;div class="row thin"&gt;
+    &lt;div class="col-s-4"&gt;
+        &lt;p&gt;col-s-4&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="col-s-4"&gt;
+        &lt;p&gt;col-s-4&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="col-s-4"&gt;
+        &lt;p&gt;col-s-4&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row thin"&gt;
+    &lt;div class="col-m-3"&gt;
+        &lt;p&gt;.col-m-3&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="col-m-3"&gt;
+        &lt;p&gt;.col-m-3&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="col-m-3"&gt;
+        &lt;p&gt;.col-m-3&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="col-m-3"&gt;
+        &lt;p&gt;.col-m-3&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row thin"&gt;
+    &lt;div class="col-l-6"&gt;
+        &lt;p&gt;col-l-6&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="col-l-6"&gt;
+        &lt;p&gt;col-l-6&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
                     <div class="bk-table">
-                        <table>
+                        <table class="border">
                             <thead>
                             <tr>
-                                <td>针对于</td>
-                                <td>需添加的类名称</td>
-                                <td>行为</td>
+                                <th>针对于</th>
+                                <th>需添加的扩展类</th>
+                                <th>行为</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -147,13 +172,14 @@
                         </table>
                     </div>
                     <br/>
-                    <h3>对齐方式：</h3>
+                    <h3>🔶 对齐方式：</h3>
+                    <p>Kico Style 的栅格有对齐方式的设定。通过添加对应的扩展类，可以实现一些用 Float 方案较难解决的对齐方式。</p>
                     <div class="bk-table">
-                        <table>
+                        <table class="border">
                             <thead>
                             <tr>
-                                <td>对齐方式</td>
-                                <td>添加的类名</td>
+                                <th>对齐方式</th>
+                                <th>需添加的扩展类</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -213,65 +239,38 @@
                         </table>
                     </div>
                     <br/>
-                    <h3>逆向转换（实验性功能）：</h3>
-                    <p>Kico Style 提供有栅格逆向转换的功能，方便你在不同宽度的时候进行栅格的逆转布局</p>
-                    <blockquote>PS：请配合使用同类型的子单列（column）元素，以获得最佳体验。col-m-* 类名不可以使用 l-reverse </blockquote>
-                    <div class="row full s-reverse show-column">
-                        <div class="col-m-4">
-                            <p>col-m-4 (1)</p>
+                    <h3>🔶 栅格隐藏：</h3>
+                    <p>Kico Style 提供有栅格隐藏的功能，通过添加扩展类 <code>s-hide</code>，<code>m-hide</code>，<code>l-hide</code> 就可以在对应宽度时隐藏该元素。</p>
+                    <div class="row thin show-column">
+                        <div class="col-s-4 s-hide">
+                            <p>在小于 600px 时隐藏</p>
                         </div>
-                        <div class="col-m-4">
-                            <p>col-m-4 (2)</p>
+                        <div class="col-m-4 m-hide">
+                            <p>在小于 900px 时隐藏</p>
                         </div>
-                        <div class="col-m-4">
-                            <p>col-m-4 (3)</p>
+                        <div class="col-l-4 l-hide">
+                            <p>在小于 1024px 时隐藏</p>
                         </div>
                     </div>
-                    <div class="bk-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td>转换方式</td>
-                                    <td>添加的类名</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>全部转换</td>
-                                    <td>reverse</td>
-                                </tr>
-                                <tr>
-                                    <td>仅小屏转换</td>
-                                    <td>s-reverse</td>
-                                </tr>
-                                <tr>
-                                    <td>仅中屏转换</td>
-                                    <td>m-reverse</td>
-                                </tr>
-                                <tr>
-                                    <td>仅大屏转换</td>
-                                    <td>l-reverse</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <pre>&lt;div class="row thin show-column"&gt;
+    &lt;div class="col-s-4 s-hide"&gt;
+        &lt;p&gt;在小于 600px 时隐藏&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="col-m-4 m-hide"&gt;
+        &lt;p&gt;在小于 900px 时隐藏&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="col-l-4 l-hide"&gt;
+        &lt;p&gt;在小于 1024px 时隐藏&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
                 </div>
             </section>
-            <!--
-            <section id="reverse">
-                <div class="section-title">
-                    <h2>栅格逆向转换：</h2>
-                </div>
-                <div class="section-content">
-
-                </div>
-            </section>-->
             <section id="list">
                 <div class="section-title">
                     <h2>项目列表：</h2>
                 </div>
                 <div class="section-content">
-                    <blockquote>PS：给 ul 元素添加“clear”类可以去除左侧小点点</blockquote>
+                    <blockquote>PS：给 ul 元素添加 <code>clear</code> 扩展类可以去除左侧小点点</blockquote>
                     <div class="row">
                         <div class="col-m-4">
                             <h3>自驾游采购清单：</h3>
@@ -288,7 +287,7 @@
                                 <li>去缤奇公司上班</li>
                                 <li>完善项目后端的代码</li>
                                 <li>和公司同事去吃下午茶</li>
-                                <li>和女朋友约会</li>
+                                <li>和女朋友约会（并不可能）</li>
                             </ol>
                         </div>
                         <div class="col-m-4">
@@ -308,28 +307,72 @@
                     <h2>表格：</h2>
                 </div>
                 <div class="section-content">
-                    <p>Kico Style 自带响应式表格系统，须在 table 元素前添加一个类名为 “bk-table” 的DIV盒子。</p>
+                    <p>Kico Style 自带响应式表格系统，须在 <code>table</code> 元素前添加一个类名为 “bk-table” 的DIV盒子。</p>
                     <blockquote>PS：表格默认为 100% 尺寸，待表格内文字空间不足时，将会自动出现滚动条以实现响应式。如果想限制表格宽度，请使用栅格系统。</blockquote>
+                    <p>给表格添加 <code>border</code> 扩展类即可获得边框版的效果。</p>
                     <div class="bk-table">
-                        <table>
+                        <table class="border">
                             <thead>
-                                <tr>
-                                    <td>第一列</td>
-                                    <td>第二列</td>
-                                    <td>第三列</td>
-                                </tr>
+                            <tr>
+                                <th>姓名</th>
+                                <th>性别</th>
+                                <th>年龄</th>
+                                <th>介绍</th>
+                            </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>第一行</td>
-                                    <td>第一行</td>
-                                    <td>第一行</td>
-                                </tr>
-                                <tr>
-                                    <td>第二行</td>
-                                    <td>第二行</td>
-                                    <td>第二行</td>
-                                </tr>
+                            <tr>
+                                <td>小缤</td>
+                                <td>女</td>
+                                <td>13</td>
+                                <td>缤奇的萌妹子，小明很想抱着软哒哒的她呢！</td>
+                            </tr>
+                            <tr>
+                                <td>小奇</td>
+                                <td>男</td>
+                                <td>13</td>
+                                <td>缤奇的全栈工程师，小明认为他是只大佬。</td>
+                            </tr>
+                            <tr>
+                                <td>小明</td>
+                                <td>男</td>
+                                <td>17</td>
+                                <td>缤奇的前端工程师，就是写这个框架的逗比。</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br/>
+                    <p>给表格添加 <code>fill</code> 扩展类即可获得色彩版的效果。</p>
+                    <div class="bk-table">
+                        <table class="fill">
+                            <thead>
+                            <tr>
+                                <th>姓名</th>
+                                <th>性别</th>
+                                <th>年龄</th>
+                                <th>介绍</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>小缤</td>
+                                <td>女</td>
+                                <td>13</td>
+                                <td>缤奇的萌妹子，小明很想抱着软哒哒的她呢！</td>
+                            </tr>
+                            <tr>
+                                <td>小奇</td>
+                                <td>男</td>
+                                <td>13</td>
+                                <td>缤奇的全栈工程师，小明认为他是只大佬。</td>
+                            </tr>
+                            <tr>
+                                <td>小明</td>
+                                <td>男</td>
+                                <td>17</td>
+                                <td>缤奇的前端工程师，就是写这个框架的逗比。</td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>

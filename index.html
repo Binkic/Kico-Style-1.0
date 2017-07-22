@@ -39,13 +39,17 @@
                 </div>
                 <div class="section-content">
                     <p>1. 欢迎享用<del>可口</del>的 Kico Style 1.0。</p>
-                    <p><a class="btn blue" href="https://www.binkic.com/product/kico" target="_blank">下载最新版</a></p>
+                    <p>
+                        <a class="btn blue" href="https://www.binkic.com/product/kico" target="_blank">下载最新版</a>
+                        <a class="btn yellow" href="https://github.com/Dreamer-Paul/Kico-Style">♥ Star</a>
+                        <a class="btn green" href="https://hi-paul.space/talk/kico-style-story.html">开发故事</a>
+                    </p>
                     <p>2. 在头部引用 Kico Style 的样式表</p>
-                    <pre><code>&lt;link href="css/binkic.css" rel="stylesheet" type="text/css" /&gt;</code></pre>
+                    <pre>&lt;link href="css/binkic.css" rel="stylesheet" type="text/css"/&gt;</pre>
                     <p>或者在你的 CSS 里面这样做：</p>
-                    <pre><code>@import url("binkic.css"); /* 引用缤奇基层框架 */</code></pre>
+                    <pre>@import url("binkic.css"); /* 引用缤奇基层框架 */</pre>
                     <p>3. 在头部插入给页面提供响应式功能的属性</p>
-                    <pre><code>&lt;meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1" /&gt;</code></pre>
+                    <pre>&lt;meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1" /&gt;</pre>
                 </div>
             </section>
             <section id="setup">
@@ -54,62 +58,29 @@
                 </div>
                 <div class="section-content">
                     <p>底层编写需要按照先写 &lt;header&gt;，之后是 &lt;main&gt;，最后 &lt;footer&gt; 的方法。当然其之间也可以添加 &lt;aside&gt;（侧边栏）一类的标签。这三个标签的含义分别对应页眉，正文和页尾。在本框架内，它们一般为 body 元素的子元素，我们不建议您将此类标签插入至任一子元素。</p>
-                    <pre><code>&lt;header&gt;
-        头部内容区（顶部菜单等）
+                    <pre>&lt;header&gt;
+    // 头部内容区（顶部菜单等）
 &lt;/header&gt;
 &lt;main class="container"&gt;
-        正文内容区
+    // 正文内容区
 &lt;/main&gt;
 &lt;footer&gt;
-        页尾内容区（友情链接等）
-&lt;/footer&gt;</code></pre>
+    // 页尾内容区（友情链接等）
+&lt;/footer&gt;</pre>
                     <p>如要限制正文区的宽度，并需要在页面左右侧保留边距，请添加一个类名为“wrap”的DIV盒子。</p>
-                    <pre><code>&lt;main class="container"&gt;
-        &lt;div class="wrap"&gt;
-                &lt;p&gt;这段文字的宽度将被约束在1200像素&lt;/p&gt;
-        &lt;/div&gt;
-&lt;/main&gt;</code></pre>
+                    <pre>&lt;main class="container"&gt;
+    &lt;div class="wrap"&gt;
+        &lt;p&gt;这段文字的宽度将被约束在1200像素&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/main&gt;</pre>
                     <blockquote>PS：上面添加的"container"类可以让其子元素无论如何放大缩小也不会溢出屏幕。</blockquote>
-                    <p>Header 子元素的布置可参考下列类名：</p>
+                    <p>wrap 也提供了多种扩展类，可以使用不同宽度的同时，也可以清除边距。</p>
                     <div class="bk-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td>类名</td>
-                                    <td>用途</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>.head-title</td>
-                                    <td>标题区，可放站点标题、可供菜单显示的切换按钮</td>
-                                </tr>
-                                <tr>
-                                    <td>.head-menu</td>
-                                    <td>菜单区，可放站点主要的菜单项</td>
-                                </tr>
-                                <tr>
-                                    <td>.site-title</td>
-                                    <td>站点标题，同时可放小标题（如有）</td>
-                                </tr>
-                                <tr>
-                                    <td>.toggle-btn-btn</td>
-                                    <td>切换显示菜单的按钮，用于手机版菜单的显示和隐藏</td>
-                                </tr>
-                                <tr>
-                                    <td>.search-btn</td>
-                                    <td>切换显示搜索的按钮，用于搜索面板的显示和隐藏</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <p>wrap 也有多种用法，分别对应不同的宽度。</p>
-                    <div class="bk-table">
-                        <table>
+                        <table class="border">
                             <thead>
                             <tr>
-                                <td>类名</td>
-                                <td>行为</td>
+                                <th>类名</th>
+                                <th>行为</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -140,6 +111,106 @@
                             </tbody>
                         </table>
                     </div>
+                </div>
+            </section>
+            <section id="class-use">
+                <div class="section-title">
+                    <h2>推荐的类名</h2>
+                </div>
+                <div class="section-content">
+                    <p>以下为开发者保罗在日常制作项目时采用的一些命名方案，可供大家参考和学习。</p>
+                    <blockquote>Header 子元素的布置可参考下列选择器：</blockquote>
+                    <div class="bk-table">
+                        <table class="border">
+                            <thead>
+                            <tr>
+                                <td>类名</td>
+                                <td>用途</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>.head-title</td>
+                                <td>页眉标题区，可放站点标题、可供菜单显示的切换按钮</td>
+                            </tr>
+                            <tr>
+                                <td>.head-menu</td>
+                                <td>页眉菜单区，可放站点主要的菜单项</td>
+                            </tr>
+                            <tr>
+                                <td>.site-title</td>
+                                <td>站点标题，同时可放小标题（如有）</td>
+                            </tr>
+                            <tr>
+                                <td>.toggle-btn-btn</td>
+                                <td>切换显示菜单的按钮，用于手机版菜单的显示和隐藏</td>
+                            </tr>
+                            <tr>
+                                <td>.search-btn</td>
+                                <td>切换显示搜索的按钮，用于搜索面板的显示和隐藏</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <blockquote>Main 子元素的布置可参考下列选择器：</blockquote>
+                    <div class="bk-table">
+                        <table class="border">
+                            <thead>
+                            <tr>
+                                <td>类名</td>
+                                <td>用途</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>main-title</td>
+                                <td>正文头部区，可放正文标题等</td>
+                            </tr>
+                            <tr>
+                                <td>main-content</td>
+                                <td>正文内容区，可放章节（section）等标签</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <blockquote>Footer 子元素的布置可参考下列选择器：</blockquote>
+                    <div class="bk-table">
+                        <table class="border">
+                            <thead>
+                            <tr>
+                                <td>类名</td>
+                                <td>用途</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>foot-menu</td>
+                                <td>页尾菜单区，可放友情链接等</td>
+                            </tr>
+                            <tr>
+                                <td>sub-footer</td>
+                                <td>页尾扩展区，可放版权信息，社交链接等</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="class-not-use">
+                <div class="section-title">
+                    <h2>切忌的类名</h2>
+                </div>
+                <div class="section-content">
+                    <p>由于本框架存在精简的扩展类名，所以在使用本框架的时候切忌使用 <code>red</code>，<code>blue</code>，<code>inline</code> 等词作为元素的样式设定类，按照其他著名前端项目的一贯作风，这些做法都是不可取的（例：示例一），当然如果你实在要用这个名称，前面也得加一个用于区分它的名称吧？（例：示例二）</p>
+                    <pre>.blue{
+    display: flex;
+    background: #666;
+}
+
+.box-blue{
+    display: flex;
+    background: #666;
+}</pre>
                 </div>
             </section>
         </div>
